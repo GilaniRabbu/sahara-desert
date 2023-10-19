@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/img-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.navbar {
+    height: 10%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.logo:hover,
+.menu-icon:hover {
+    opacity: 0.8;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    color: #FFF;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.row {
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.col-1 {
+    flex-basis: 50%;
+}
+
+.col-2 {
+    flex-basis: 50%;
+}
+
+.title {
+    color: #FFF;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.desc {
+    color: #FFF;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    color: #111;
+    background-color: #FFF;
+    width: 180px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 0;
+    margin-top: 30px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    color: #FFF;
+    background-color: #111;
+}
+
+.card {
+    width: 220px;
+    height: 230px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px 15px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s ease-in;
+}
+
+.card:nth-child(1) {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(img/img-01.jpg);
+    background-blend-mode: multiply;
+}
+
+.card:nth-child(2) {
+    background-image: url(img/img-02.jpg);
+}
+
+.card:nth-child(3) {
+    background-image: url(img/img-03.jpg);
+}
+
+.card:nth-child(4) {
+    background-image: url(img/img-04.jpg);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    color: #111;
+    font-size: 20px;
+    text-shadow: 0 0 2px #FFF;
+}
+
+.card p {
+    color: #FFF;
+    font-size: 13px;
+    text-shadow: 0 0 5px #111;
+}
+
+@media (max-width: 540px) {
+    nav {
+        display: none;
+    }
+
+    .menu-icon {
+        margin-left: auto;
+    }
+
+    .title {
+        font-size: 80px;
+    }
+}
+
+@media (max-width:1200px) {
+    .row {
+        display: block;
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+
+    .card {
+        width: 200px;
+        margin: 10px 5px;
+        padding: 15px;
+        text-align: left;
+    }
+}
